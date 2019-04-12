@@ -1,0 +1,95 @@
+<!--Nav bar -->
+<nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+    <a class="navbar-brand mr-1" href="/">{{msg}}</a>
+</nav>
+
+<div class="container">
+ <div class="watch">
+                <div class="stopwatch"></div>
+                <br>
+        <nav class="controls">
+                    <a href="#" class="button" onClick="stopwatch.start();">Start</a>
+                    <a href="#" class="button" onClick="stopwatch.stop();">Stop</a>
+                    <a href="#" class="button" onClick="stopwatch.restart();">Restart</a>
+                    <a href="#" class="button" onClick="stopwatch.lap();">Log Time</a>
+                    <a href="#" class="button" onClick="stopwatch.clear();">Clear Log</a> 
+                </nav>
+                <ul class="results"></ul>
+        </div>
+    <div class="row mt-4">
+        <div class="col">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#home">Add Task</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#view-chart">View Chart</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#view-tasks">View Task Entries</a>
+                </li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane container active" id="home">
+                    <div class="row mt-4">
+                        <div class="col-md-6 offset-md-3">
+                            <form class="clearfix mb-4" action="POST">
+                                <div class="form-group">
+                                    <h2>Add task entry:</h2>
+                                    <div class="form-group">
+                                        <input type="text" id="task-date" class="form-control"
+                                            aria-describedby="task-date" hidden>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="task-minutes">Minutes spent on task</label>
+                                        <input type="text" id="task-minutes" class="form-control"
+                                            aria-describedby="task-minutes">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="task-category">Task Category</label>
+                                        <select class="form-control" id="task-category">
+                                            <option value="homework" selected>Homework</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="task-goal">Goal for this task (in minutes)</label>
+                                    <input class="form-control" id="task-goal" aria-describedby="task-goal">
+                                </div>
+                                <button id="submit" class="btn btn-primary float-right">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane container fade" id="view-chart">
+                    <div class="row">
+                        <div class="col-md-10 offset-1">
+                            <div id="chart-container">
+                                <canvas id="mycanvas"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane container fade" id="view-tasks">
+                    <div class="row">
+                        <div class="col-md-6 offset-3">
+                            <h3>Current time entries:</h3>
+                            <ul id="task-list" class="list-group">
+                                {{#each tasks}}
+                                <li data-id="{{this.id}}">
+                                    Date: {{this.task_date}}<br>
+                                    Minutes: {{this.task_minutes}}<br>
+                                    Category: {{this.task_category}}<br>
+                                    Goal: {{this.task_goal}}
+                                </li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

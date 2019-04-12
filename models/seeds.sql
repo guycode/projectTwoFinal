@@ -1,0 +1,15 @@
+INSERT INTO tasks (task_date, task_minutes, task_category, task_goal) VALUES ('2019-2-1', 240, "homework", 240);
+INSERT INTO tasks (task_date, task_minutes, task_category, task_goal) VALUES ('2019-2-2', 120, "homework", 120);
+INSERT INTO tasks (task_date, task_minutes, task_category, task_goal) VALUES ('2019-2-3', 420, "homework", 480);
+INSERT INTO tasks (task_date, task_minutes, task_category, task_goal) VALUES ('2019-2-4', 300, "homework", 240);
+INSERT INTO tasks (task_date, task_minutes, task_category, task_goal) VALUES ('2019-2-5', 20, "homework", 60);
+INSERT INTO tasks (task_date, task_minutes, task_category, task_goal) VALUES ('2019-2-6', 120, "homework", 240);
+INSERT INTO tasks (task_date, task_minutes, task_category, task_goal) VALUES ('2019-2-7', 60, "homework", 60);
+INSERT INTO tasks (task_date, task_minutes, task_category, task_goal) VALUES ('2019-2-8', 60, "homework", 240);
+INSERT INTO tasks (task_date, task_minutes, task_category, task_goal) VALUES ('2019-2-9', 180, "homework", 60);
+INSERT INTO tasks (task_date, task_minutes, task_category, task_goal) VALUES ('2019-2-10', 480, "homework", 480);
+INSERT INTO tasks (task_date, task_minutes, task_category, task_goal) VALUES ('2019-2-11', 60, "homework", 240);
+INSERT INTO tasks (task_date, task_minutes, task_category, task_goal) VALUES ('2019-2-12', 60, "homework", 60);
+INSERT INTO tasks (task_date, task_minutes, task_category, task_goal) VALUES ('2019-2-13', 120, "homework", 180);
+INSERT INTO tasks (task_date, task_minutes, task_category, task_goal) VALUES ('2019-2-14', 60, "homework", 60);
+INSERT INTO tasks (task_date, task_minutes, task_category, task_goal) VALUES ('2019-2-15', 180, "homework", 180);
